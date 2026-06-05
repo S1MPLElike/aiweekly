@@ -1,0 +1,51 @@
+:root {
+  --theme-primary: #f5cd6a;
+  --theme-bg: #fffcf3;
+  --theme-surface: #ffffff;
+  --theme-surface-soft: #fff8df;
+  --theme-text-primary: #2f2a22;
+  --theme-text-secondary: #766e60;
+  --theme-border: #f2e8c8;
+  --theme-accent: #f5cd6a;
+  --theme-accent-strong: #e8b947;
+  --theme-accent-text: #463500;
+}
+
+.theme-cream {
+  --theme-primary: #f5cd6a;
+  --theme-bg: #fffcf3;
+  --theme-surface: #ffffff;
+  --theme-surface-soft: #fff8df;
+  --theme-text-primary: #2f2a22;
+  --theme-text-secondary: #766e60;
+  --theme-border: #f2e8c8;
+  --theme-accent: #f5cd6a;
+  --theme-accent-strong: #e8b947;
+  --theme-accent-text: #463500;
+}
+
+.theme-tiffany {
+  --theme-primary: #4ecdc4;
+  --theme-bg: #f0fdf9;
+  --theme-surface: #ffffff;
+  --theme-surface-soft: #ccfbef;
+  --theme-text-primary: #0f172a;
+  --theme-text-secondary: #475569;
+  --theme-border: #a7f3d0;
+  --theme-accent: #4ecdc4;
+  --theme-accent-strong: #2dd4bf;
+  --theme-accent-text: #0284c7;
+}
+
+.theme-mint {
+  --theme-primary: #86efac;
+  --theme-bg: #f0fdf4;
+  --theme-surface: #ffffff;
+  --theme-surface-soft: #dcfce7;
+  --theme-text-primary: #14532d;
+  --theme-text-secondary: #457a58;
+  --theme-border: #bbf7d0;
+  --theme-accent: #86efac;
+  --theme-accent-strong: #4ade80;
+  --theme-accent-text: #166534;
+}

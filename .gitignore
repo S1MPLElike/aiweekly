@@ -1,0 +1,49 @@
+# ========== 前端相关 ==========
+# 依赖目录
+frontend/node_modules/
+# 编译产物
+frontend/dist/
+# Vite缓存
+frontend/node_modules/.vite/
+
+# ========== 后端相关 ==========
+# 环境变量（包含敏感信息）
+backend/.env
+# Go编译产物
+backend/tmp/
+backend/bin/
+# Go可执行文件
+*.exe
+# Air临时文件（开发热重载）
+__pycache__/
+*.tmp
+
+# ========== 数据库相关 ==========
+# SQLite数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# ========== IDE配置 ==========
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ========== 日志文件 ==========
+*.log
+tmp/
+
+# ========== 系统文件 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== 其他 ==========
+# 临时文件
+*.bak
+*.cache
+
+# 根目录tmp（项目根目录）
+tmp/
