@@ -193,6 +193,3 @@ func (s *Service) CallDeepseek(messages []Message) (string, error)
 
 ---
 
-## 一句话结尾
-
-> "这个项目让我完整实践了从需求到上线的全流程，掌握了 Go 后端开发、AI API 集成、数据库设计的核心能力。"
