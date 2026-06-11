@@ -1,8 +1,8 @@
-# AI 智能工作周报系统 - 简历项目描述
+# 冲击波智能工作周报系统
 
 ---
 
-**AI 智能工作周报系统**：基于 Go + Vue 3 + DeepSeek LLM 的工作记录管理平台，解决职场人每日汇报繁琐、报告撰写耗时的痛点，通过 AI 自动生成专业日报、周报。
+**冲击波智能工作周报系统**：基于 Go + Vue 3 + DeepSeek LLM 的工作记录管理平台，解决职场人每日汇报繁琐、报告撰写耗时的痛点，通过 AI 自动生成专业日报、周报。
 
 ---
 
@@ -62,7 +62,7 @@
 
 | 表 | 关系 | 设计亮点 |
 |------|------|----------|
-| users | 主表 | 密码 bcrypt 加密、TokenVersion |
+| 用户 | 主表 | 密码 bcrypt 加密、TokenVersion |
 | work_records | user 1:N | 联合索引 (user_id, record_date) |
 | daily_reports | user 1:N | 唯一索引 (user_id, report_date) |
 | weekly_reports | user 1:N | 唯一索引 (user_id, week_start, week_end) |
@@ -192,4 +192,32 @@ func (s *Service) CallDeepseek(messages []Message) (string, error)
 > "超时控制、日志追踪、异常处理。"
 
 ---
+
+
+# 下方是项目的核心功能演示
+
+### 首先是初始界面，默认主题是浅黄色，内置还有蒂芙尼蓝和绿色。
+<img width="1920" height="1080" alt="屏幕截图 2026-06-12 035243" src="https://github.com/user-attachments/assets/f24b5e17-c886-465c-a640-8eb30d56528e" />
+
+### 登录后就进入到主页，这就是整体布局，然后左下角有个小日历，日历里1号到6号都有个小绿点这个绿点表示当天有工作记录。在月台账模块可以生成指定周的周报
+
+<img width="1920" height="1080" alt="屏幕截图 2026-06-12 035822" src="https://github.com/user-attachments/assets/537476dc-4aea-4147-b9b7-4dd1bc29a055" />
+
+### 开启今日工作模块和昨日工作模块长得是基本一样的，由于今天没有记录工作那么我通过日历表点击6月6号展示一下。右侧的生成日报按钮点击后就会生成一份书面化且规范的日报，经过多次测试，工作记录总字数300字左右的话生成时间在3s左右。
+
+<img width="1920" height="1080" alt="屏幕截图 2026-06-12 040215" src="https://github.com/user-attachments/assets/18b0a39b-26d1-4116-908d-c50ee4b68fff" />
+
+### 工作卡片可以点击详细查看所有工作内容，而且支持删除，不支持更改。
+
+<img width="1920" height="1080" alt="屏幕截图 2026-06-12 040458" src="https://github.com/user-attachments/assets/ae30561a-a136-4fbd-8288-bc896302b2b9" />
+
+### 如下是月台账模块，他就是一个大的日历表，然后点击对应行的生成就会生成当天的周报，这个周报会基于该周每天的日报来生成周报，生成时间实测5s左右。
+
+<img width="1920" height="1080" alt="屏幕截图 2026-06-12 040903" src="https://github.com/user-attachments/assets/7b9d4677-996a-47f5-9c4e-8d5fd4299542" />
+
+### 关于“我”模块，这里有一个经历模块，用户可以自主编辑当前在那一阶段。
+
+<img width="1920" height="1080" alt="屏幕截图 2026-06-12 041220" src="https://github.com/user-attachments/assets/0d17d07c-530a-4da9-8bd4-fc13e00ce0d3" />
+
+### 本项目没有社交功能，因为考虑到记录工作的产品是比较敏感和隐私性较强的。
 
