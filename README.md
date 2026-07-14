@@ -84,7 +84,7 @@ type Service struct {
 func (s *Service) CallDeepseek(messages []Message) (string, error)
 ```
 
-### Prompt Engineering（面试加分项）
+### Prompt Engineering
 
 #### 1. 日报生成
 
